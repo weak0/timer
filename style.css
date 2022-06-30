@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: rgb(216, 216, 216);
+    --second-color: rgb(228, 84, 0);
+}
+
+body{
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    color: var(--first-color);
+    background-color: #333;
+}
+
+.wrapper {
+    position: relative;
+    padding: 20px;
+    width:600px;
+    background: radial-gradient(circle, rgba(43,44,46,1) 0%, rgba(25,25,25,1) 93%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+h1 {
+    color: var(--first-color);
+    font-size: 60px;
+    font-weight: lighter;
+}
+
+.fa-solid.fa-question, .fa-solid.fa-paintbrush{
+    position: absolute;
+    top:18px;
+    right: 14px;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+.fa-solid.fa-paintbrush{
+    right: 50px;
+    font-size: 20px;
+    top: 20px;
+}
+
+.fa-solid.fa-question:hover, .fa-solid.fa-paintbrush:hover{
+    color: var(--second-color);
+    
+}
+
+.stoper {
+
+    color: var(--second-color);
+    margin: 20px 0 0 0;
+    font-size: 60px;
+}
+
+.time {
+    visibility: hidden;
+}
+
+.buttons {
+
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+
+}
+
+.buttons  button{
+
+    display: block;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid var(--second-color);
+    color: var(--first-color);
+    margin: 10px;
+    cursor: pointer;
+    transition: background .3s;
+    border-radius: 5px;
+    font-size: 20px;
+    
+}
+
+.buttons button:hover, .buttons button:focus {
+    background-color: var(--second-color);
+    outline: none;
+}
+
+
+.buttons button:last-child {
+    width: 100%;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+li {
+    list-style: none;
+}
+
+li span {
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.modal {
+
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.658);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: absolute;
+
+
+}
+
+.bg {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--first-color);
+    color: black;
+    padding: 20px 40px;
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5%;
+   
+}
+
+.bg p {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px 0;
+    color: var(--second-color);
+}
+
+.bg span {
+
+    font-size: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    
+}
+
+.bg button{
+
+    display: block;
+    padding: 14px 0;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: var(--second-color);
+    color: var(--first-color);
+    font-size: 24px;
+    width: 40%;
+    margin:  50px auto 0;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background 0.3s;
+    
+
+
+}
+
+.bg button:hover {
+    background-color: rgb(204, 72, 10);
+}
+
+
+.bg i, b {
+    color: var(--second-color);
+}
+
+.colors {
+
+    width: 75px;
+    height: 200px;
+    position: absolute;
+    right: -80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: right 0.4s;
+    
+}
+
+.colors.active {
+    right: 5px;
+}
+
+.color {
+
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.color:nth-child(1) {
+    background-color: rgb(228, 84, 0);
+    box-shadow: 0px 0px 15px rgb(228, 84, 0);
+}
+
+.color:nth-child(2) {
+    background-color: rgb(72, 228, 0);
+    box-shadow: 0px 0px 15px rgb(72, 228, 0);
+}
+
+.color:nth-child(3) {
+    background-color: rgb(238, 63, 63);
+    box-shadow: 0px 0px 15px rgb(238, 63, 63);
+    
+}
